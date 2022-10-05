@@ -9,9 +9,9 @@ exports.div = function div (a,b) {
 }
 
 exports.containsNumbers = function containsNumbers(text) {
-    const specChars = /[\0\t\r\n\b\a\f\v]/;
+    //const specChars = /[\0\t\r\n\b\a\f\v    ]/;
     for (let i = 0; i < text.length; i++) {
-        if (!isNaN(text.charAt(i)) && !specChars.test(text.charAt(i)))
+        if (!isNaN(parseInt((text.charAt(i)))))// && !specChars.test(text.charAt(i)))
             return true;
     }
     return false;
